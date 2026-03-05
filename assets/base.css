@@ -3707,3 +3707,9 @@ main, .page-width { background-color: #0a0a0a !important; color: #d4d0c9 !import
 /* HIDE CLUTTER */
 .shop-follow-button { display: none !important; }
 .powered-by-link { display: none !important; }
+
+/* STOCK INDICATORS */
+.card__stock-indicator, .product__stock-status { margin-top: 0.5rem; }
+.stock-badge { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; }
+.stock-badge--in { color: #5a7a5a !important; }
+.stock-badge--out { color: #7a4a4a !important; }

@@ -105,6 +105,14 @@
                     </h2>
                   </a>
                 </div>
+              {%- when 'title' -%}
+                <div class="product__stock-status">
+                  {%- if product.available -%}
+                    <span class="stock-badge stock-badge--in">&#9679; In Stock</span>
+                  {%- else -%}
+                    <span class="stock-badge stock-badge--out">&#9679; Out of Stock — check back soon</span>
+                  {%- endif -%}
+                </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',

@@ -205,6 +205,13 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            <div class="card__stock-indicator">
+              {%- if card_product.available -%}
+                <span class="stock-badge stock-badge--in">&#9679; In Stock</span>
+              {%- else -%}
+                <span class="stock-badge stock-badge--out">&#9679; Out of Stock</span>
+              {%- endif -%}
+            </div>
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
                 {% liquid
